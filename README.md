@@ -5,13 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby 2.1.2p95 (2014-05-08 revision 45877) [x86_64-darwin13.0]
 
 * System dependencies
 
 * Configuration
 
-* Database creation
+* Database creation 
 
 * Database initialization
 
