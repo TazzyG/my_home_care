@@ -10,18 +10,31 @@
                         <h1>My Home Health</h1>
                         <h3>Your personalized home health assistant</h3>
                         <h4>I <em> was </em>  am strong </h4>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <li>
-                                <%= link_to "My Activities", '#', class: "btn btn-default btn-lg" %>
-                            </li>
-                            <li>
-                                <%= link_to "My Goals", '#', class: "btn btn-default btn-lg" %>
-                            </li>
-                            <li>
-                                <%= link_to "Social Board", '#', class: "btn btn-default btn-lg" %>
-                            </li>
-                        </ul>
+
+                        <% if user_signed_in? %>
+
+
+                            <hr class="intro-divider">
+                            <ul class="list-inline intro-social-buttons">
+                                <li>
+                                    <%= link_to "My Activities", '#', class: "btn btn-default btn-lg" %>
+                                </li>
+                                <li>
+                                    <%= link_to "My Goals", '#', class: "btn btn-default btn-lg" %>
+                                </li>
+                                <li>
+                                    <%= link_to "Social Board", '#', class: "btn btn-default btn-lg" %>
+                                </li>
+                            </ul>
+                        <% else %>
+                             <ul class="list-inline intro-social-buttons">
+                                <li>
+                                    <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-success btn-lg" %>
+                                </li>
+                
+                                
+                            </ul>
+                        <% end %>
                     </div>
                 </div>
             </div>
@@ -33,10 +46,11 @@
     <!-- /.intro-header -->
 
     <!-- Page Content -->
+
     <div class = "row jumbotron center">
         <div class="col-lg-12 ">
             <div class="intro-title">
-            	<h1> Laurie and Melissa are working on something for you. </h1> 
+            	<h1> Laurie and Melissa <br> are working on something <br> for you. </h1> 
                 <h2> Meanwhile, Keep being you !!! </h2>
             </div>
         </div>
@@ -47,12 +61,7 @@
     <!-- Footer -->
     
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
+    
 </body>
 
 </html>
