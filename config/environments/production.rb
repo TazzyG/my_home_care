@@ -78,5 +78,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # Required for Devise and Heroku
-  config.action_mailer.default_url_options = { host: => 'laurie2015-oct.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'laurie2015-oct.herokuapp.com' }
 end
