@@ -24,5 +24,7 @@ module MyHomeCare
     config.active_record.raise_in_transactional_callbacks = true
     # Required for Devise and Heroku
     config.assets.initialize_on_precompile = false
+    # Fix error when Heroku loads Precompiling assets failed
+    config.serve_static_assets = true
   end
 end
